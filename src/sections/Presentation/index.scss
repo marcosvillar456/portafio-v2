@@ -1,0 +1,59 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__container {
+    max-width: 500px;
+    text-align: start;
+    padding: 10px;
+    p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    &__name {
+      font-size: 5em;
+      margin: 0px;
+      color: #ffc300;
+    }
+    &__image {
+      margin-left: 5vw;
+      img {
+        border-radius: 50%;
+        height: 40vw;
+        width: 40vw;
+        max-height: 400px;
+        max-width: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .presentation {
+    &__container {
+      max-width: none;
+      p {
+        font-size: 23px;
+        font-weight: 600;
+      }
+      &__name {
+        font-size: 18vw;
+      }
+      &__image {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .presentation {
+    &__container {
+      &__name {
+        font-size: 90px;
+      }
+    }
+  }
+}
